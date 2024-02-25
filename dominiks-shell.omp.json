@@ -6,7 +6,7 @@
       "segments": [
         {
           "background": "#BF231D",
-          "foreground": "#c85555",
+          "foreground": "#ffffff",
           "style": "plain",
           "template": " \uf0e7 ",
           "type": "root"
