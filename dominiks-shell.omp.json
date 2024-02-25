@@ -30,7 +30,7 @@
           "foreground": "#ffffff",
           "properties": {
             "folder_separator_icon": " \ue0b1 ",
-            "max_depth": 3,
+            "max_depth": 2,
             "style": "agnoster_short"
           },
           "style": "plain",
@@ -48,19 +48,8 @@
             "fetch_user": true
           },
           "style": "plain",
-          "template": "[ {{ .User.Name }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ]",
+          "template": "[ {{ .User.Name }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }} ]",
           "type": "git"
-        },
-        {
-          "background": "#256C9D",
-          "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
-          "style": "plain",
-          "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
-          "properties": {
-            "text": "\ue0b0"
-          },
-          "type": "python"
         },
         {
           "foreground": "#256C9D",
