@@ -29,9 +29,8 @@
           "background": "#256C9D",
           "foreground": "#ffffff",
           "properties": {
-            "folder_icon": "\uf115",
             "folder_separator_icon": " \ue0b1 ",
-            "max_depth": 2,
+            "max_depth": 3,
             "style": "agnoster_short"
           },
           "style": "plain",
@@ -45,10 +44,11 @@
             "branch_max_length": 30,
             "fetch_stash_count": false,
             "fetch_status": true,
-            "fetch_upstream_icon": true
+            "fetch_upstream_icon": true,
+            "fetch_user": true
           },
           "style": "plain",
-          "template": "[ {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ]",
+          "template": "[ {{ .User.Name }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ]",
           "type": "git"
         },
         {
